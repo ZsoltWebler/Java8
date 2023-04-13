@@ -1,5 +1,6 @@
 package org.webler.zsolt;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.*;
@@ -179,7 +180,10 @@ public class Streams {
                 .collect(Collectors.toList());
 
         assertEquals(collect, Arrays.asList(16, 32, 64, 128, 256));
+
     }
+
+
 
     @Test
     void sortedDemo() {
@@ -324,6 +328,7 @@ public class Streams {
 
         Map<Character, List<Employee>> groupByAlphabet = listOfEmployees.stream().collect(
                 Collectors.groupingBy(employee -> new Character(employee.getName().charAt(0))));
+
 
         assertEquals(groupByAlphabet.get('B').get(0).getName(), "Bill Gates");
         assertEquals(groupByAlphabet.get('J').get(0).getName(), "Jeff Bezos");

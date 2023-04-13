@@ -9,6 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class Optionals {
 
+
     @Test
     void beforeOptional() {
 
@@ -112,14 +113,13 @@ public class Optionals {
     @Test
     void optionalDemo() {
         User user = new User("John", new Address(new Country(null, null), "Street", "65"));
+
         String result = Optional.ofNullable(user)
                 .flatMap(u -> Optional.ofNullable(u.getAddress()))
                 .flatMap(u -> Optional.ofNullable(u.getCountry()))
                 .map(u -> u.getIsoCode())
                 .orElse("default");
 
-        assertEquals(result,"default");
+        assertEquals(result, "default");
     }
-
-
 }

@@ -12,5 +12,5 @@ hogy különböző műveleteket hajtsunk végre az adatokon.
 
 ## Optional
 
-A Java 8 egy másik érdekes új funkciója az _Optinal_ osztály. Az Optional
+A Java 8 egy másik érdekes új funkciója az _Optional_ osztály. Az Optional
 egy csomagoló osztály, amivel a _NullPointerException_-ket tudjuk kezelni.
